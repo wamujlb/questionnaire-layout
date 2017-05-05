@@ -1,0 +1,42 @@
+<!-- ******** add head -->
+{{> head}}
+
+<!-- ******** add header -->
+{{> header}}
+
+<main>
+    <div class="container">
+
+        <h1 class="page-title">All results</h1>
+        <h4 class="page-subtitle">
+            Here you can compare your results with the other members
+        </h4>
+
+        <section class="results-section">
+            <table class="simple-table">
+                <thead>
+                    <tr>
+                        <th width="40">ID</th>
+                        <th>User E-mail</th>
+                        <th>Question</th>
+                        <th width="20%">User Answer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each customers}}
+                        <tr>
+                            <td>{{this.index}}</td>
+                            <td>{{this.email}}</td>
+                            <td>{{this.question}}</td>
+                            <td>{{this.answer}}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </section><!-- /.results-section -->
+
+    </div><!-- /.container -->
+</main><!-- /main -->
+
+<!-- ******** add footer -->
+{{> footer}}

@@ -1,0 +1,41 @@
+// ******************************************************
+// buttons
+// ******************************************************
+
+.btn
+  font-family: 'Roboto Slab', serif
+  width: 100%
+  padding: 10px 20px
+  line-height: 1.4em
+  font-size: 1.4rem
+  outline: none
+  border: none
+  background: $accent-color
+  color: $white
+  cursor: pointer
+  +br($border-radius-base)
+  +transition(all .4s ease)
+  &.btn-circle
+    width: 34px
+    height: 34px
+    line-height: 34px
+    text-align: center
+    padding: 0
+    vertical-align: middle
+    background-color: transparent
+    +br(50%)
+    &>i
+      line-height: 34px
+      font-size: 1.1rem
+    &.btn-edit
+      color: $color-success
+    &.btn-delete
+      color: $color-danger
+    &:hover
+      background: rgba($black, .3)
+  &.btn-submit
+    background: $color-success
+  &.btn-decline
+    background: $color-danger
+  &:hover
+    background: $accent-color-dark

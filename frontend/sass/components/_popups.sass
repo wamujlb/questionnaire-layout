@@ -1,0 +1,83 @@
+// ******************************************************
+// popups
+// ******************************************************
+
+.popup-wrapper
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  z-index: 1000
+  overflow-y: auto
+  visibility: hidden
+  opacity: 0
+  +transition(all .4s ease)
+  .popup-overlay
+    position: fixed
+    width: 100%
+    height: 100%
+    background: rgba($black, .4)
+  .popup
+    width: 600px
+    max-width: calc(100% - 30px)
+    position: relative
+    overflow: hidden
+    margin: 60vh auto 10vh
+    +transition(all .4s ease)
+    +br($border-radius-base)
+    +bs(0 10px 20px rgba($black, .23))
+    .popup-header
+      background: $accent-color-dark
+      padding: 15px 0
+      font-size: 1.4rem
+      color: $white
+      text-align: center
+      position: relative
+      +border-top-left-radius($border-radius-base)
+      +border-top-right-radius($border-radius-base)
+      .close-btn
+        position: absolute
+        right: 15px
+        top: 15px
+        cursor: pointer
+        +transition(all .3s ease)
+        &:hover
+          color: $primary-color
+    .popup-body
+      background: $primary-gray
+      padding: 30px
+      .text-input
+        background: rgba($black, .1)
+        color: $secondary-color
+      .divider-text
+        color: $accent-color-dark
+        text-align: center
+        margin-bottom: 20px
+        position: relative
+        span
+          position: relative
+          z-index: 10
+          display: inline-block
+          padding: 0 20px
+          background: $primary-gray
+        &::before
+          content: ''
+          z-index: 0
+          width: 100%
+          height: 1px
+          position: absolute
+          top: 50%
+          display: block
+          background: $gray-lighter
+    .popup-footer
+      +clr
+      .btn
+        width: 50%
+        float: left
+        +br(0)
+  &.active-popup
+    visibility: visible
+    opacity: 1
+    .popup
+      margin-top: 10vh

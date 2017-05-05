@@ -1,0 +1,67 @@
+// ******************************************************
+// inputs
+// ******************************************************
+
+.radio-input
+  margin: 5px
+  label
+    font-size: 1.2rem
+    font-weight: 400
+    padding: 10px
+    width: 100%
+    text-transform: capitalize
+    vertical-align: middle
+    display: inline-block
+    cursor: pointer
+    +br($border-radius-base)
+    +transition(all .2s ease)
+    &:hover
+      background: rgba($black, .2)
+    input[type="radio"]
+      display: none
+      &:checked + .radio-dot::after
+        right: 50%
+    .radio-dot
+      width: 20px
+      height: 20px
+      display: block
+      float: left
+      border: 3px solid $accent-color
+      margin-right: 1rem
+      position: relative
+      overflow: hidden
+      +br(50%)
+      &::after
+        content: ''
+        position: absolute
+        right: -150%
+        top: 50%
+        width: 12px
+        height: 12px
+        background: $accent-color-dark
+        +transition(all .5s ease)
+        +translate3d(50%, -50%, 0)
+        +br(50%)
+
+.input-wrapper
+  width: 100%
+  margin-bottom: 1.5rem
+  &:last-child
+    margin-bottom: 0
+  .text-input
+    background: rgba($black, .3)
+    outline: none
+    border: 3px solid transparent
+    width: 100%
+    padding: 10px 20px
+    line-height: 1.4em
+    font-size: 1.4rem
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    color: $primary-text-color
+    +br($border-radius-base)
+    +transition(all .4s ease)
+    &:focus
+      border: 3px solid $accent-color
+      background: transparent

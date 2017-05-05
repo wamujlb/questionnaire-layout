@@ -1,0 +1,130 @@
+<!-- ******** add head -->
+{{> head}}
+
+<!-- ******** add header -->
+{{> header}}
+
+<main>
+    <div class="container">
+
+        <h1 class="page-title">Add new question</h1>
+        <h4 class="page-subtitle">
+            Here you can add, delete new questions and answers for them
+        </h4>
+
+        <section class="questions-section-list">
+
+            <div class="question-items">
+                <div class="question-item">
+                    <h3 class="question-title">1. What is your class standing?</h3>
+                    <div class="controls">
+                        <button class="btn btn-circle btn-edit open-popup" data-popup="editQuestionPopup"><i class="material-icons">edit</i></button>
+                        <button class="btn btn-circle btn-delete open-popup"><i class="material-icons">delete</i></button>
+                    </div>
+                </div><!-- /.question-item -->
+
+                <div class="question-item">
+                    <h3 class="question-title">2. If you have a job, how many hours per week do you work?</h3>
+                    <div class="controls">
+                        <button class="btn btn-circle btn-edit open-popup" data-popup="editQuestionPopup"><i class="material-icons">edit</i></button>
+                        <button class="btn btn-circle btn-delete"><i class="material-icons">delete</i></button>
+                    </div>
+                </div><!-- /.question-item -->
+
+                <div class="question-item">
+                    <h3 class="question-title">3. Do you take day or evening classes?</h3>
+                    <div class="controls">
+                        <button class="btn btn-circle btn-edit open-popup" data-popup="editQuestionPopup"><i class="material-icons">edit</i></button>
+                        <button class="btn btn-circle btn-delete"><i class="material-icons">delete</i></button>
+                    </div>
+                </div><!-- /.question-item -->
+
+                <div class="question-item">
+                    <h3 class="question-title">4. What is the quality of presentation by ELL instructors?</h3>
+                    <div class="controls">
+                        <button class="btn btn-circle btn-edit open-popup" data-popup="editQuestionPopup"><i class="material-icons">edit</i></button>
+                        <button class="btn btn-circle btn-delete"><i class="material-icons">delete</i></button>
+                    </div>
+                </div><!-- /.question-item -->
+
+            </div><!-- /.questions-items -->
+
+            <button class="btn open-popup" data-popup="addQuestionPopup">ADD NEW QUESTION</button>
+
+        </section><!-- /.question-section-list -->
+    </div><!-- /.container -->
+</main><!-- /main -->
+
+<div class="popup-wrapper" id="addQuestionPopup">
+    <div class="popup-overlay close-popup"></div>
+    <div class="popup">
+        <div class="popup-header">Add New Question <i class="material-icons close-btn close-popup">close</i></div>
+        <div class="popup-body">
+
+            <div class="input-wrapper">
+                <input type="text" class="text-input" placeholder="Your Question...">
+            </div>
+
+            <p class="divider-text"><span>Add answers to form below</span></p>
+
+            <div class="input-wrapper">
+                <input type="text" class="text-input" placeholder="Your Answer...">
+            </div>
+            <div class="input-wrapper">
+                <input type="text" class="text-input" placeholder="Your Answer...">
+            </div>
+
+            <button class="btn">ADD ANSWER</button>
+
+        </div>
+        <div class="popup-footer">
+            <button class="btn btn-decline">DECLINE</button>
+            <button class="btn btn-submit">SUBMIT</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup-wrapper" id="editQuestionPopup">
+    <div class="popup-overlay close-popup"></div>
+    <div class="popup">
+        <div class="popup-header">Edit Question <i class="material-icons close-btn close-popup">close</i></div>
+        <div class="popup-body">
+
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="What is your class standing?">
+            </div>
+
+            <p class="divider-text"><span>Answers</span></p>
+
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="non-matriculated">
+            </div>
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="freshman">
+            </div>
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="sophomore">
+            </div>
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="junior">
+            </div>
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="senior">
+            </div>
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="graduate">
+            </div>
+
+            <button class="btn">ADD ANSWER</button>
+
+        </div>
+        <div class="popup-footer">
+            <button class="btn btn-decline">DECLINE</button>
+            <button class="btn btn-submit">SUBMIT</button>
+        </div>
+    </div>
+</div>
+
+<!-- ******** add footer -->
+{{> footer}}
